@@ -84,7 +84,7 @@ public class GettingLoopy{
             }
             else{
                 factor=2; //starting value for factor
-                while(factor<number){
+                do{
                     //while factor is less than the number being tested
                     if(number%factor==0){
                         //if the nuber is divisible by the factor then the number is not prime
@@ -94,7 +94,7 @@ public class GettingLoopy{
                     else{
                         factor=factor+1;
                     }
-                }
+                }while(factor<number);
             }
             if(isprime){
                 System.out.print(" "+number+" "); //print out number
