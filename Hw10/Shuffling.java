@@ -3,7 +3,10 @@
 
 Eric Reid
 Homework 10
-
+CSE 002
+10/30/2015
+This program prints out all the cards in a deck, randomly sorts them, and then randomly
+picks a hand
 */
 import java.util.Scanner;//import scanner class for user input
 
