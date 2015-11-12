@@ -41,24 +41,25 @@ public class CSE2Linear{
                     continput=true;
                     myScanner.nextLine(); //clear scanner contents
                 }
+                if(i !=0 && temp<grades[i-1]){
+                    //if next value is less than the previous return an error
+                    System.out.println("Number not greater than previous.");
+                    continput=true; //continue looking for input
+                    myScanner.nextLine(); //clear scanner contents
+                }
 
             }
             grades[i]=temp; 
             temp=0; //clear temp variable. 
         }//achieve successful input 
         //begin working with array grades. 
-        shuffle(grades); //randomize array 
-        System.out.println("Not sorted: ");
-        printArray(grades);
         System.out.print("Enter searching value: ");
         int value=myScanner.nextInt();//input value
-        linearsearch(grades,value);//find the value with linear search 
-        sort(grades); //sort the array
-        System.out.println("Sorted array: ");
-        printArray(grades); //print array 
-        System.out.print("Enter searching value: "); 
-        value = myScanner.nextInt(); //get new searching value
         binarysearch(grades,value); //run a binary search 
+        shuffle(grades); //shuffle grades
+        System.out.println("Scrambled array: "); 
+        printArray(grades); 
+        linearsearch(grades,value); //run linear search 
     }
     //METHODS
     public static void linearsearch(int[] grades, int value){
